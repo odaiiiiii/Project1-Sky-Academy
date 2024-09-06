@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="navBar/nav.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <!--NavBar-->
+    <div id="navbar"></div>
+
+
+        <!--Title page-->
+        <div class="container row  justify-content-between py-1 home-div1 ">
+            <h4 class="col-8 title-home">Welcome Back Odai! Here are your latest updates.</h4>
+            <div class="col-lg-2 col-4 col-md-3">
+                <button class=" w-100  btn btn-danger newReq-home">New Request</button>
+
+            </div>
+        </div>
+
+        
+         <!--Sec 1  Welcome -->
+        <div class="container home-div2  my-5 row m-auto">
+              <!--View Profile sec-->
+
+                <div class="col-12 col-lg-7    box-view-profile  shadow-boxes">
+
+                    <div class="viewProfile-box d-flex justify-content-between ">
+                       <div class="d-flex justify-content-between  ">
+                        <img  src="./images/fr2.png" >
+                        <span class="name-pos">
+                            <span  >odai abd</span> <br>
+                            <span >Web developer</span>
+                        </span>
+                       </div>
+                        <a href="profiles.html" class="rounded col-lg-3 col-md-3 col-4 btn-ViewPorfiles">View Porfiles</a>
+                    </div>
+
+                    <div class="row py-2 ">
+
+                        <div class="d-flex col-lg-4 col-6">
+                            <i class="fa-solid fa-user  "></i>
+                            <span class="name-pos">
+                               
+                                <span  >Reporting To:</span> <br>
+                                <span >Salwa Assem</span>
+                            </span>         
+                         </div>
+
+                         <div class="d-flex col-lg-4 col-6" >
+                            <i class="fa-solid fa-arrow-up-right-dots"></i>
+                                 <span class="name-pos">
+                                    <span  >Corporate Level:</span> <br>
+                                    <span >Level 10</span>
+                            </span>         
+                         </div>
+                    </div>
+
+
+
+                </div>
+
+           <!--Green boxes sec-->
+
+                <div class="col-lg-5 col-12 row box-two ">
+
+                    <div class="col-6 bg-success d-flex  shadow-boxes green-box-home row">
+                        <span class="d-block col-4"><i class="fa-solid fa-list-check"></i> <p>Vacation Requests</p></span>
+                    <h4 class="col-5">10</h4>
+                    </div>
+
+                    <div class="col-6 bg-success d-flex  shadow-boxes green-box-home row">
+                        <span class="d-block col-4"><i class="fa-solid fa-list-check"></i> <p class="text-center " >Levels Requests</p></span>
+                    <h4 class="col-5">10</h4>
+                    </div>
+                  
+
+                </div>
+        </div>
+  
+            <!--Sec 2 Latest News & slides -->
+
+            <div class="container home-div3">
+                <h5>Latest News:</h5>
+                <div class="row">
+                <swiper-container class="mySwiper col-12 mt-2" pagination="true" pagination-clickable="true"  space-between="30"
+                centered-slides="true" autoplay-delay="10000" autoplay-disable-on-interaction="false">
+                <swiper-slide> <div class="title-swiper">
+                    <h5>Best Spots For A Summer Vacation</h5>
+                    <p>Check out these spots where we provide you with a discount code! Type VACATION when inserting the promo code and behold the surprise!</p>
+                </div></swiper-slide>
+                <swiper-slide> <div class="title-swiper">
+                    <h5>Best Spots For A Summer Vacation</h5>
+                    <p>Check out these spots where we provide you with a discount code! Type VACATION when inserting the promo code and behold the surprise!</p>
+                </div></swiper-slide>
+                <swiper-slide> <div class="title-swiper">
+                    <h5>Best Spots For A Summer Vacation</h5>
+                    <p>Check out these spots where we provide you with a discount code! Type VACATION when inserting the promo code and behold the surprise!</p>
+                </div></swiper-slide>
+               
+               
+              </swiper-container>
+                </div>
+            
+            
+            </div>
+
+
+            <!-- sec 3 Vacation Requests search & cards -->
+
+            <div class="container home-div4  shadow-boxes ">
+                <div class="row justify-content-between">
+                   <span class="d-flex col-lg-3  VacationRequests-sec">
+                    <i class="fa-solid fa-list-check"></i>
+                    <p>Vacation Requests</p>
+                   </span>
+                
+                    
+                    <div class="search-container my-2 my-lg-0 col-lg-3">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input onkeyup="filterCards()" class="form-control" id="searchInput" type="search" placeholder="Search..." aria-label="Search">
+                    </div>
+                    
+                </div>
+                <hr>
+
+          <!--cards  -->
+
+                <div class="row allcards" id="cards-container">
+                  
+                  
+
+                    </div>
+                    <p class="text-end text-danger ViewMore"><a class="text-danger" style="text-decoration: none; " href="./vacationRequests.html">View More</a> <i class="fa-solid fa-arrow-right-long " ></i></p>
+
+                </div>
+            </div>
+            
+            
+    <script src="navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="vacationRequests.js"></script>
+
+
+    <script >
+        // show data on home page 
+
+       fetch('data.json')
+        .then(response=>response.json())
+        .then(data=>{
+
+            const cards = document.getElementById('cards-container');
+            data.slice(0,3).forEach(item=>{
+                const card = document.createElement('div')
+                card.classList.add('card', 'col-lg-3', 'col-md-4', 'col-sm-6', 'col-10', 'shadow-boxes', 'cardSearch');
+                card.innerHTML = `
+                        <div class="  ">
+                            <img  src='${item.image}' >
+                            <p>${item.name}</p>
+                        </div>
+                       <div class="card-detailes">
+                        <span class="title1">Submitted on:</span> <br>
+                        <span class="subtitle1">${item.submittedOn}</span>
+                       </div>
+
+                       <div class="card-detailes">
+                        <span class="title1">Duration:</span> <br>
+                        <span class="subtitle1"> ${item.duration}</span>
+                       </div>
+
+
+                       <div class="card-detailes">
+                        <span class="title1">Salary:</span> <br>
+                        <span class="subtitle1">${item.salary}</span>
+                       </div>
+
+                       <div class="row  buttons">
+                        <button type="button" class="btn btn-outline-success text-success col-lg-5">Decline</button>
+                       <button type="button" class="btn btn-success text-white col-lg-5">Approve</button>
+                       </div>
+
+
+
+                ` ;
+                cards.appendChild(card)
+
+            })
+        })
+    </script>
+
+   
+
+</body>
+</html>

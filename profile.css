@@ -1,0 +1,159 @@
+.profile-div1{
+    margin: auto !important;
+    margin-top: 6rem !important;
+}
+
+
+.viewProfile-box-profile{
+    padding: 10px 0px;
+}
+.viewProfile-box-profile img{
+width: 50px ;
+height: 50px ;
+border-radius: 50%;
+}
+
+
+.name-pos-profile{
+    line-height:0.7;
+    padding-left: 7px;
+    text-align: start;
+    justify-content: center;
+    padding-top: 5px;
+  }
+  .name-pos-profile span {
+      font-size: 10px;
+  }
+  .name-pos-profile span:first-of-type {
+      font-weight: bold;
+  }
+  .name-pos-profile span:nth-of-type(3) {
+      color: rgba(128, 128, 128, 0.651);
+  }
+
+
+  
+.btn-ViewPorfiles{
+    font-size: 13px !important;
+
+    background-color: #218838 !important;
+    border: 1px solid white !important;
+    max-height: 30px;
+    color: white;
+    }
+    
+    .btn-ViewPorfiles:hover{
+        font-size: 13.3px !important;
+        background-color: #fff !important;
+        border: 1px solid green !important;
+        color: green;
+        transition: 1s;
+        max-height: 30px;
+        }
+
+
+        .fa-hourglass-start ,.fa-plane ,.fa-head-side-cough{
+            font-size: 40px;
+            color: rgba(128, 128, 128, 0.651);
+        }
+
+
+        .hr-responsive{
+            display: none;
+        }
+
+     
+      .History-sec-title{
+        text-align: start;
+        justify-content: start !important;
+        display: flex !important;
+        gap: 5px;
+      }
+      .History-sec-title span{
+        font-size: 13px;
+      }
+
+        .History-sec .fa-list-check{
+            font-size: 25px;
+        }
+      
+     
+        
+        .card-History{
+           padding: 15px 15px !important;
+           background-color: white;
+           height: 90px;
+           width: 100% ;
+           margin-bottom: 25px;
+           text-align: start;
+           justify-content: center !important;
+           align-items: center !important;
+           
+        
+        }
+        .card-History-title,.card-History-date ,.card-History-Approved{
+            font-size: 11px;
+        }
+
+       .card-History-title{
+            color: black;
+             font-weight: bold;
+           
+        }
+        .card-History-date {
+            color: rgb(170, 162, 162);
+        }
+
+        .card-History-span{
+            line-height: 1;
+            padding-bottom: 2px;
+        }
+       
+        .card-History-Approved{
+            color: rgb(134, 123, 123);
+            font-weight: 400;
+
+        }
+
+
+        .subtitle1green{
+            color:green !important;
+            font-size: 12px;
+            font-weight: bold;        }
+
+        /*  RESPONSIVE  */
+        @media(max-width:992px){
+            .icons-div{
+                gap: 1.5rem;
+            }
+            .hr-responsive{
+                display: flex;
+            }
+
+
+        }
+
+
+
+        @media(max-width:430px){
+        .card-detailes .title1 , .card-detailes .subtitle1{
+            font-size: 10px !important;
+            padding:  0px !important;
+        }
+
+
+        }
+
+          /*    ==  RESPONSIVE ==  */
+
+        .navbar-toggler {
+            color: white !important; 
+        }
+        
+        
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important; 
+        }
+        
+
+ 
